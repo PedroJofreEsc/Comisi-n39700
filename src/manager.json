@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Manzana",
+        "description": "123",
+        "price": 2,
+        "thumbnail": "qwe",
+        "code": "3",
+        "id": 0,
+        "stock": 3
+    },
+    {
+        "title": "Pera",
+        "description": "123",
+        "price": 2,
+        "thumbnail": "qwe",
+        "code": "3",
+        "id": 1,
+        "stock": 3
+    },
+    {
+        "title": "platano",
+        "description": "123",
+        "price": 2,
+        "thumbnail": "qwe",
+        "code": "3",
+        "id": 2,
+        "stock": 3
+    },
+    {
+        "title": "cereza",
+        "description": "123",
+        "price": 2,
+        "thumbnail": "qwe",
+        "code": "3",
+        "id": 3,
+        "stock": 3
+    }
+]
