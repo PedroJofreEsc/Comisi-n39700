@@ -1,38 +1,92 @@
 [
     {
         "title": "Manzana",
-        "description": "123",
+        "description": "1 kilo de fruta",
         "price": 2,
         "thumbnail": "qwe",
         "code": "3",
         "id": 0,
-        "stock": 3
+        "stock": 1
     },
     {
         "title": "Pera",
-        "description": "123",
+        "description": "1 kilo de fruta",
         "price": 2,
         "thumbnail": "qwe",
-        "code": "3",
+        "code": "as3",
         "id": 1,
         "stock": 3
     },
     {
         "title": "platano",
-        "description": "123",
-        "price": 2,
+        "description": "1 kilo de fruta",
+        "price": 4,
         "thumbnail": "qwe",
-        "code": "3",
+        "code": "pl1",
         "id": 2,
-        "stock": 3
+        "stock": 2
     },
     {
         "title": "cereza",
-        "description": "123",
+        "description": "1 kilo de fruta",
         "price": 2,
         "thumbnail": "qwe",
-        "code": "3",
+        "code": "cer1",
         "id": 3,
+        "stock": 10
+    },
+    {
+        "title": "Television",
+        "description": "television plana",
+        "price": 20,
+        "thumbnail": "qwe",
+        "code": "tel90",
+        "id": 4,
         "stock": 3
+    },
+    {
+        "title": "notebook hp",
+        "description": "notebook hp 215gb 3g ram",
+        "price": 15,
+        "thumbnail": "qwe",
+        "code": "nhp55",
+        "id": 5,
+        "stock": 9
+    },
+    {
+        "title": "chocolate para fundir",
+        "description": "1 kilo de chocolate de leche",
+        "price": 5,
+        "thumbnail": "qwe",
+        "code": "cpf32",
+        "id": 6,
+        "stock": 10
+    },
+    {
+        "title": "pack cerveza",
+        "description": "5 cervezas sin alcohol",
+        "price": 7,
+        "thumbnail": "qwe",
+        "code": "pcn4",
+        "id": 7,
+        "stock": 20
+    },
+    {
+        "title": "agua ",
+        "description": "botella de 6 litros",
+        "price": 8,
+        "thumbnail": "qwe",
+        "code": "ag6l",
+        "id": 8,
+        "stock": 0
+    },
+    {
+        "title": "bebida",
+        "description": "lata  de bebida",
+        "price": 1,
+        "thumbnail": "qwe",
+        "code": "beb88",
+        "id": 9,
+        "stock": 10
     }
 ]
