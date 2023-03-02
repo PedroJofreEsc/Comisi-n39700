@@ -4,7 +4,7 @@ import fs from "fs"
 
 class ProductManager {
     #path;
-    id = 0;
+
 
 
     constructor(path) {
@@ -24,9 +24,10 @@ class ProductManager {
         }
     }
 
-    async addProduct(title, description, price, thumbnail, code, stock) {
+    async addProduct(title, description, price, code, stock, category) {
         const products = await this.getProducts();
-        if (!title || !description || !price || !thumbnail || !stock || !code) { return console.log('falto un atributo ') }
+        const productLen = products.length
+        if (!title || !description || !price || !stock || !code || !category) { return console.log('falto un atributo ') }
 
 
         if (products.find(prod => prod.code === code)) {
@@ -37,12 +38,14 @@ class ProductManager {
             title,
             description,
             price,
-            thumbnail,
+            thumbnail: [],
             code,
-            id: this.id,
-            stock
+            id: productLen + 1,
+            stock,
+            status: true,
+            category,
         };
-        this.id += 1
+
 
 
         const updateProducts = [...products, newProduct]
@@ -66,14 +69,18 @@ class ProductManager {
     }
 
     async updateProduct(id, campo) {
+
         const products = await this.getProducts()
-        const indexProduct = products.findIndex((p) => p === id)
-        const product = this.getProductById(id)
-        const updateProduct = { ...product, campo }
-        const updateProductsList = products.splice(indexProduct, 1)
+        const indexProduct = products.findIndex(p => p.id === id)
+        const product = await this.getProductById(id)
+
+        const updateProduct = { ...product, ...campo }
+        const updateProductsList = products.filter(p => p.id !== id)
+
         updateProductsList.push(updateProduct)
         if (indexProduct) {
-            await fs.promises.writeFile(this.#path, JSON.stringify({ updateProductsList }))
+
+            await fs.promises.writeFile(this.#path, JSON.stringify(updateProductsList))
         } else {
             return console.log('Not found')
         }
@@ -83,8 +90,10 @@ class ProductManager {
 
     async deleteProduct(id) {
         const products = await this.getProducts()
-        const indexProduct = products.findIndex((p) => p === id)
-        const productUpdate = products.splice(indexProduct, 1);
+
+        const indexProduct = products.findIndex(p => p.id === id)
+        const productUpdate = products.filter(p => p.id !== id);
+        console.log(productUpdate)
         if (indexProduct) {
             await fs.promises.writeFile(this.#path, JSON.stringify(productUpdate))
         } else {

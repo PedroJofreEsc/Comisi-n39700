@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>producto</p>
+    <form action="/api/products" method="post">
+        <div>
+            <label for="title">Ingrese el nombre del articulo: </label>
+            <input type="text" name="title" id="product-title" required>
+        </div>
+        <div>
+            <label for="description">Ingrese descripcion: </label>
+            <input type="text" name="description" id="product-description" required>
+        </div>
+        <div>
+            <label for="code">Ingrese codigo de articulo: </label>
+            <input type="text" name="code" id="product-code" required>
+        </div>
+        <div>
+            <label for="price">Ingrese valor del articulo: </label>
+            <input type="number" name="price" id="product-price" required>
+        </div>
+        <div>
+            <label for="status">articulo esta activo: </label>
+            <input type="text" name="status" id="product-status">
+        </div>
+        <div>
+            <label for="stock">Ingrese stock inicial: </label>
+            <input type="number" name="stock" id="product-stock" required>
+        </div>
+        <div>
+            <label for="category">Ingrese categoria del articulo: </label>
+            <input type="text" name="category" id="product-category" required>
+        </div>
+
+        <div>
+            <button type="submit">
+                Enviar
+            </button>
+        </div>
+
+    </form>
+    <p></p>
+    <p>update product</p>
+    <form action="/api/products/:pid" method="put">
+        <div>
+            <label for="id">Ingrese el nombre del articulo: </label>
+            <input type="text" name="id" id="product-title">
+        </div>
+        <div>
+            <label for="title">Ingrese el nombre del articulo: </label>
+            <input type="text" name="title" id="product-title">
+        </div>
+        <div>
+            <label for="description">Ingrese descripcion: </label>
+            <input type="text" name="description" id="product-description" required>
+        </div>
+        <div>
+            <label for="code">Ingrese codigo de articulo: </label>
+            <input type="text" name="code" id="product-code" required>
+        </div>
+        <div>
+            <label for="price">Ingrese valor del articulo: </label>
+            <input type="number" name="price" id="product-price" required>
+        </div>
+        <div>
+            <label for="status">articulo esta activo: </label>
+            <input type="text" name="status" id="product-status">
+        </div>
+        <div>
+            <label for="stock">Ingrese stock inicial: </label>
+            <input type="number" name="stock" id="product-stock" required>
+        </div>
+        <div>
+            <label for="category">Ingrese categoria del articulo: </label>
+            <input type="text" name="category" id="product-category" required>
+        </div>
+
+        <div>
+            <button type="submit">
+                Enviar
+            </button>
+        </div>
+
+    </form>
+
+
+    <h2>cart</h2>
+    <p>nuevo carrito</p>
+    <form enctype="multipart/form-data" action="/api/carts" method="post">
+        <button type="submit">
+            agregar nuevo carro
+        </button>
+        </div>
+
+    </form>
+
+    <p>agregar al carrito</p>
+    <form enctype="multipart/form-data" action="/api/carts/:cid/product/:pid" method="post">
+        <div>
+            <label for="cid">id del carro: </label>
+            <input type="number" name="cid" id="cid-cart" required>
+        </div>
+        <div>
+            <label for="pid">id del producto: </label>
+            <input type="number" name="pid" id="product-cart" required>
+        </div>
+
+        <button type="submit">
+            agregar producto al carro
+        </button>
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>
