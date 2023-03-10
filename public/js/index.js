@@ -1,4 +1,3 @@
-
 console.log("sssad")
 const socket = io();
 const containerProducts = document.getElementById("body")
@@ -14,7 +13,8 @@ socket.on("update", (data) => {
             <p>Precio: $ ${element.price}</p>
             <p>Descripción: ${element.description}</p>
             <p>Stock: ${element.stock}</p>
-            <p>Categoría: ${element.category}</p>
+            <p>Categoría: ${element.id}</p>
+            <p>Code: ${element.id}</p>
         </li>
         `
     });
